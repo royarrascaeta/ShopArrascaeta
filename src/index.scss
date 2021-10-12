@@ -1,0 +1,8 @@
+@import "./components/shared";
+
+body {
+  margin: 0;
+  font-family: $font-text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
