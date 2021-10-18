@@ -1,0 +1,11 @@
+@import "./components/shared";
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.6rem;
+
+  @include media-up(md) {
+    margin-top: 5rem;
+  }
+}

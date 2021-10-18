@@ -12,13 +12,13 @@
     top: 0;
     bottom: unset;
     // left: 0;
-    padding: 0 1rem;
+    // padding: 0 1rem;
   }
 }
 
 .nav {
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 1.6rem 0;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
@@ -27,27 +27,31 @@
 
   @include media-up(md) {
     max-width: 1200px;
-    padding: unset;
+    padding: 0 1.6rem;
     grid-template-columns: auto 5fr;
     justify-items: unset;
   }
 
   &_logo {
     width: fit-content;
-    padding-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    position: relative;
-    font-family: $font-title;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: $light-color;
-    margin-top: -0.5rem;
     z-index: 1;
+
+    a {
+      display: flex;
+      position: relative;
+      padding-bottom: 0.5rem;
+      margin-top: -0.5rem;
+      align-items: center;
+      font-family: $font-title;
+      font-size: 2.6rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: $light-color;
+    }
 
     span:nth-child(1) {
       color: $alt-color;
-      font-size: 2.4rem;
+      font-size: 3.8rem;
       font-style: italic;
       font-weight: 800;
     }
@@ -57,8 +61,8 @@
       right: 0;
       bottom: 6%;
       background: $alt-color;
-      font-size: 1.2rem;
-      line-height: 1rem;
+      font-size: 1.6rem;
+      line-height: 1.4rem;
       transform: rotate(-5deg);
     }
   }
@@ -80,30 +84,6 @@
 
     @include media-up(lg) {
       width: 60%;
-    }
-
-    .cart {
-      order: 0;
-
-      @include media-up(md) {
-        order: 1;
-      }
-
-      a {
-        &:hover {
-          background: unset;
-        }
-      }
-
-      i {
-        font-size: 1.3rem;
-        transition: transform linear 0.2s;
-
-        &:hover {
-          transform: rotate(-15deg);
-          transition: transform linear 0.2s;
-        }
-      }
     }
 
     ul {
@@ -132,6 +112,7 @@
           justify-content: flex-start;
           align-items: center;
           cursor: pointer;
+          font-size: 1.6rem;
           font-weight: 500;
           color: $light-color;
           background-color: $dark-color;
@@ -182,7 +163,8 @@
     ul.sub {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      min-width: 100%;
+      width: fit-content;
       opacity: 0;
       transition: transform ease-in 0.3s, opacity ease-in 0.5s;
       z-index: -1;
@@ -199,10 +181,9 @@
 
         a {
           background: $alt-color;
-          width: 100%;
           text-align: left;
-          // padding: 1.2rem 0.8rem;
-          padding: 1.2rem 0;
+          justify-content: flex-start;
+          padding: 1.2rem 0.8rem;
 
           &:hover {
             background: $alt-dark-color;

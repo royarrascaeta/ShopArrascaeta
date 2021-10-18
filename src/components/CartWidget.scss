@@ -1,0 +1,32 @@
+@import "shared";
+
+.cart {
+  display: flex;
+  order: 0;
+
+  @include media-up(md) {
+    order: 1;
+  }
+
+  a {
+    padding: 1.2rem 0.8rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: $light-color;
+    width: 100%;
+
+    &:hover {
+      background: unset;
+    }
+
+    &:hover > i {
+      transform: rotate(-15deg);
+      transition: transform linear 0.2s;
+    }
+  }
+
+  i {
+    font-size: 2rem;
+    transition: transform linear 0.2s;
+  }
+}
