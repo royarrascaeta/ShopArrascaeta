@@ -28,10 +28,6 @@ const NavBar = () => {
             <li><a>Contacto</a></li>
             <li class="cart"><a><i class="fas fa-shopping-cart"></i></a></li>
           </ul>
-          
-          
-          
-          
         </nav>
       </div>
     </div>
