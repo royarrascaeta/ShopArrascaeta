@@ -11,14 +11,12 @@
   @include media-up(md) {
     top: 0;
     bottom: unset;
-    // left: 0;
-    // padding: 0 1rem;
   }
 }
 
 .nav {
   margin: 0 auto;
-  padding: 1.6rem 0;
+  padding: 0.8rem 0;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
@@ -35,6 +33,7 @@
   &_logo {
     width: fit-content;
     z-index: 1;
+    padding: 0.4rem 0;
 
     a {
       display: flex;
