@@ -1,0 +1,45 @@
+@import "../shared";
+
+.item-count {
+  width: auto;
+  max-width: 20rem;
+  padding: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 0.8rem;
+
+  button {
+    padding: 0;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #fff;
+    color: $main-color;
+    font-weight: bold;
+    font-size: 3rem;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: $main-color-light;
+    }
+
+    &:disabled {
+      cursor: auto;
+      color: $shadow-color;
+    }
+  }
+
+  button:last-child {
+    padding: 1.6rem;
+    grid-column: span 3;
+    background-color: $alt-color;
+    color: $light-color;
+    font-size: 1.6rem;
+
+    &:hover {
+      background-color: $alt-color-light;
+      transition: all ease-in 0.1s;
+    }
+  }
+}
