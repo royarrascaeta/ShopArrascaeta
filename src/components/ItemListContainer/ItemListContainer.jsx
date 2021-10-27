@@ -1,12 +1,12 @@
 import React from 'react';
-import ItemCount from '../ItemCount/ItemCount';
+import ItemList from '../ItemList/ItemList';
 import "./ItemListContainer.scss";
 
 const ItemListContainer = ({greeting}) => {
   return (
-    <div class="item-list-container">
+    <div className="item-list-container">
       {greeting}
-      <ItemCount stock={10} />
+      <ItemList />
     </div>
   )
 }

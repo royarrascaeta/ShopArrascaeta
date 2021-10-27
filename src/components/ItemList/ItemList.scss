@@ -1,0 +1,16 @@
+@import "../shared";
+
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1rem auto;
+
+  @include media-up(md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include media-up(lg) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

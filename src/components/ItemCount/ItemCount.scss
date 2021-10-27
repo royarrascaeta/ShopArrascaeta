@@ -1,9 +1,7 @@
 @import "../shared";
 
 .item-count {
-  width: auto;
-  max-width: 20rem;
-  padding: 1.6rem;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -36,7 +34,7 @@
     grid-column: span 3;
     background-color: $alt-color;
     color: $light-color;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 
     &:hover {
       background-color: $alt-color-light;

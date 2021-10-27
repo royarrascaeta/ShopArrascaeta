@@ -3,7 +3,7 @@ import "./CartWidget.scss"
 
 const CartWidget = () => {
   return (
-    <div class="cart"><a><i class="fas fa-shopping-cart"></i></a></div>
+    <div className="cart"><a><i className="fas fa-shopping-cart"></i></a></div>
   )
 }
 
