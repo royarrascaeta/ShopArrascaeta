@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Item from '../Item/Item';
 import "./ItemList.scss";
 import {getData} from "../../helpers/getData";
+import Loader from "../Loader/Loader";
 
 
 const ItemList = () => {
@@ -20,7 +21,7 @@ const ItemList = () => {
     <div className="item-list">
       {
         loading 
-        ? <h3>Cargando...</h3>
+        ? <Loader />
         : data.map(prod => <Item key={prod.id} info={prod} />)
       }
     </div>

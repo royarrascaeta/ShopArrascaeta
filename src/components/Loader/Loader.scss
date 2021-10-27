@@ -1,0 +1,12 @@
+@import "../shared";
+
+.loader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+
+  img {
+    width: 5rem;
+  }
+}

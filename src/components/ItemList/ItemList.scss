@@ -4,7 +4,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  min-height: 50vh;
   margin: 1rem auto;
+  position: relative;
 
   @include media-up(md) {
     grid-template-columns: repeat(4, 1fr);
