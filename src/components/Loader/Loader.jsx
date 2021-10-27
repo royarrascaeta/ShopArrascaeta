@@ -3,7 +3,7 @@ import "./Loader.scss";
 
 const Loader = () => {
   return (
-    <div class="loader">
+    <div className="loader">
       <figure>
         <img src="./assets/img/loader.svg" alt="" />
       </figure>

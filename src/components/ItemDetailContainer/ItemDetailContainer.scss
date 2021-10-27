@@ -1,0 +1,14 @@
+@import "../shared";
+
+.item-detail-container {
+  display: grid;
+  width: 100%;
+  height: min-content;
+  padding: 1rem 0rem;
+  position: relative;
+
+  @include media-up(md) {
+    grid-template-columns: 3fr 2fr;
+    gap: 1rem;
+  }
+}

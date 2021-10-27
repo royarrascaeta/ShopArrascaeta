@@ -22,7 +22,7 @@ const ItemList = () => {
       {
         loading 
         ? <Loader />
-        : data.map(prod => <Item key={prod.id} info={prod} />)
+        : data.map(prod => <Item key={prod.id} detail={prod} />)
       }
     </div>
   )

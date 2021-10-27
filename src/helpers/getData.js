@@ -54,3 +54,9 @@ export const getData = new Promise((res, rej) => {
       res(db);
     }, 2000);
 })
+
+export const getItem = new Promise((res, rej) => {
+    setTimeout(() => {
+      res(db[0]);
+    }, 2000);
+})

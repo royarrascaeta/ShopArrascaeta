@@ -29,3 +29,7 @@ $breakpoints: (
     @content;
   }
 }
+
+@mixin border-light {
+  border: 0.1rem solid $shadow-color;
+}
