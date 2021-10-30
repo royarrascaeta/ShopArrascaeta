@@ -1,37 +1,50 @@
-import React from "react";
+import React, {useRef} from "react";
+import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.scss";
 
 const NavBar = () => {
+
+  const navMenu = useRef(null);
+  const btnIcon = useRef(null);
+
+  const handleClick = (e) => {
+    console.log(e)
+    console.log("Click en boton")
+    navMenu.current.classList.toggle("expand");
+    btnIcon.current.classList.toggle("fa-times")
+  }
+
+
   return(
-    <div className="container">
-      <div className="nav">
-        <div className="nav_logo">
-          <a href="index.html"><span>$</span><span>erendipia</span><span>SHOP</span></a>
+    <header>
+      <div className="container">
+        <div className="nav">
+          <div className="nav_logo">
+            <Link to="/"><span>$</span><span>erendipia</span><span>SHOP</span></Link>
+          </div>
+          <nav className="nav_menu" ref={navMenu} >
+            <ul>
+              <li><Link className="links" to="/">Home</Link></li>
+              <li className="main">
+                <Link className="links">Categorias <i class="fas fa-chevron-down"></i></Link>
+                <ul className="sub">
+                  <li><Link className="links" to="/categoria/Verde">Verde</Link></li>
+                  <li><Link className="links" to="/categoria/Azul">Azul</Link></li>
+                  <li><Link className="links" to="/categoria/Rojo">Rojo</Link></li>
+                </ul>
+              </li>
+              <li><Link className="links" to="">Nosotros</Link></li>
+              <li><Link className="links" to="">Contacto</Link></li>
+              <CartWidget />
+            </ul>
+          </nav>
         </div>
-        <nav className="nav_menu">
-          <ul>
-            <li><a>Home</a></li>
-            <li className="main">
-              <a>Categorias <i class="fas fa-chevron-down"></i></a>
-              <ul className="sub">
-                <li><a>Categoría #1</a></li>
-                <li><a>Categoría #2</a></li>
-                <li><a>Categoría #3</a></li>
-                <li><a>Categoría #4</a></li>
-                <li><a>Categoría #5</a></li>
-                <li><a>Categoría #6</a></li>
-                <li><a>Categoría con mucho texto #7</a></li>
-                <li><a>Categoría #8</a></li>
-              </ul>
-            </li>
-            <li><a>Nosotros</a></li>
-            <li><a>Contacto</a></li>
-            <CartWidget />
-          </ul>
-        </nav>
+        <button className="nav_btn" onClick={(e)=> handleClick(e)}>
+          <i className="fas fa-bars" ref={btnIcon}></i>
+        </button>
       </div>
-    </div>
+    </header>
   );
 }
 

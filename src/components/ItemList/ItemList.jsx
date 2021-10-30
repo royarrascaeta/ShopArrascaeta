@@ -1,28 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Item from '../Item/Item';
 import "./ItemList.scss";
-import {getData} from "../../helpers/getData";
-import Loader from "../Loader/Loader";
 
 
-const ItemList = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    getData
-    .then(res => setData(res))
-    .catch(err => console.log(err))
-    .finally(()=> setLoading(false))
-  }, [])
-
-
+const ItemList = ({products}) => {
   return (
     <div className="item-list">
       {
-        loading 
-        ? <Loader />
-        : data.map(prod => <Item key={prod.id} detail={prod} />)
+        products.map(prod => <Item key={prod.id} detail={prod} />)
       }
     </div>
   )

@@ -4,6 +4,7 @@ const db = [
     name: "Producto 1",
     pictureUrl: "https://via.placeholder.com/300/023e8a/FFFFFF",
     description: "Descripción de producto 1",
+    category: "Azul",
     price: 8499,
     stock: 8
   },
@@ -12,6 +13,7 @@ const db = [
     name: "Producto 2",
     pictureUrl: "https://via.placeholder.com/300/0077b6/FFFFFF",
     description: "Descripción de producto 2",
+    category: "Rojo",
     price: 6899,
     stock: 3
   },
@@ -20,6 +22,7 @@ const db = [
     name: "Producto 3",
     pictureUrl: "https://via.placeholder.com/300/0096c7/FFFFFF",
     description: "Descripción de producto 3",
+    category: "Azul",
     price: 7459,
     stock: 15
   },
@@ -28,6 +31,7 @@ const db = [
     name: "Producto 4",
     pictureUrl: "https://via.placeholder.com/300/00b4d8/FFFFFF",
     description: "Descripción de producto 4",
+    category: "Verde",
     price: 2499,
     stock: 2
   },
@@ -36,6 +40,7 @@ const db = [
     name: "Producto 5",
     pictureUrl: "https://via.placeholder.com/300/48cae4/FFFFFF",
     description: "Descripción de producto 5",
+    category: "Verde",
     price: 6399,
     stock: 6
   },
@@ -44,6 +49,7 @@ const db = [
     name: "Producto 6",
     pictureUrl: "https://via.placeholder.com/300/90e0ef/FFFFFF",
     description: "Descripción de producto 6",
+    category: "Azul",
     price: 9459,
     stock: 3
   },

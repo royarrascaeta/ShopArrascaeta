@@ -22,6 +22,7 @@
   align-items: center;
   justify-items: center;
   cursor: default;
+  position: relative;
 
   @include media-up(md) {
     max-width: 1200px;
@@ -69,6 +70,7 @@
   &_menu {
     width: 100%;
     z-index: 1;
+    height: 0;
     max-height: 50vh;
     overflow-y: auto;
 
@@ -105,7 +107,7 @@
         position: relative;
         order: 1;
 
-        a {
+        .links {
           height: 100%;
           display: flex;
           justify-content: flex-start;
@@ -118,6 +120,7 @@
           padding: 1.2rem 0.8rem;
           transition: background-color ease-in 0.2s;
           white-space: nowrap;
+          text-decoration: none;
 
           @include media-up(md) {
             justify-content: center;
@@ -178,7 +181,7 @@
         margin: 0;
         padding: 0;
 
-        a {
+        .links {
           background: $alt-color;
           text-align: left;
           justify-content: flex-start;
@@ -191,4 +194,24 @@
       }
     }
   }
+
+  &_btn {
+    position: absolute;
+    top: 1.6rem;
+    right: 2.5%;
+    border: none;
+    background: transparent;
+    font-size: 3rem;
+    color: $alt-color;
+    cursor: pointer;
+
+    @include media-up(md) {
+      display: none;
+    }
+  }
+}
+
+.expand {
+  height: min-content;
+  transition: 1s;
 }

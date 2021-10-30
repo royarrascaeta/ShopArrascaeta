@@ -6,7 +6,9 @@
   gap: 1rem;
   padding: 1rem;
   background: #fff;
-  cursor: pointer;
+  color: $medium-color;
+  box-shadow: 0rem 0rem 0.5rem $shadow-color;
+  border-radius: 0.5rem;
   transition: ease-in 0.2s;
   @include border-light;
 
@@ -17,16 +19,29 @@
 
   & > * {
     margin: 0;
+    color: $medium-color;
   }
 
-  .title {
-    font-size: 1.6rem;
-  }
+  .link {
+    text-decoration: none;
+    color: unset;
 
-  .img {
-    img {
-      width: 100%;
-      height: auto;
+    & > * {
+      margin: unset;
+    }
+
+    .img {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .title {
+      margin-top: 1rem;
+      font-size: 1.6rem;
+      font-weight: 550;
+      color: $medium-color;
     }
   }
 

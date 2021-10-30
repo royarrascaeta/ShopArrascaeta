@@ -2,22 +2,22 @@ import React from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import "./ItemDetail.scss";
 
-const ItemDetail = ({detail}) => {
+const ItemDetail = ({product}) => {
   return (
     <>
       <div className="detail-img">
         <figure>
-          <img src={detail.pictureUrl} alt="" />
+          <img src={product.pictureUrl} alt="" />
         </figure>
       </div>
       <div className="detail-list">
         <div>
-          <h2 className="title">{detail.name}</h2>
-          <p>{detail.description}</p>
+          <h2 className="title">{product.name}</h2>
+          <p>{product.description}</p>
         </div>
         <div>
-          <span className="price">${detail.price}</span>
-          <ItemCount stock={detail.stock} />
+          <span className="price">${product.price}</span>
+          <ItemCount stock={product.stock} />
         </div>
       </div>
     </>
