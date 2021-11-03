@@ -25,8 +25,32 @@
 
   @include border-light;
 
+  hr {
+    margin: 1rem 0;
+    border-top: solid 0.1rem $shadow-color;
+  }
+
   .title {
     margin-top: 1rem;
+  }
+
+  .category {
+    font-size: 1.4rem;
+
+    &-link {
+      text-decoration: none;
+      color: $main-color;
+      font-weight: bold;
+    }
+  }
+
+  .description-title {
+    margin: 1rem 0;
+  }
+
+  .description {
+    margin-top: 1rem;
+    color: $dark-color;
   }
 
   .price {
