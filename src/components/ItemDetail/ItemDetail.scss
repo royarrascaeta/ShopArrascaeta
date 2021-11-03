@@ -1,20 +1,28 @@
 @import "../shared";
 
 .detail-img {
+  max-height: 70vh;
+  padding: 2rem;
+  box-shadow: 0rem 0rem 1rem 0.1rem $shadow-color;
+
   @include border-light;
   text-align: center;
 
-  // img {
-  //   width: 100%;
-  //   height: auto;
-  // }
+  img {
+    // max-width: 100%;
+    // height: auto;
+    height: 100%;
+    width: auto;
+  }
 }
 
 .detail-list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 2rem;
+  box-shadow: 0rem 0rem 1rem 0.1rem $shadow-color;
+
   @include border-light;
 
   .title {

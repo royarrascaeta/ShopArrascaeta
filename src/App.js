@@ -9,8 +9,8 @@ function App() {
     <div className="App">
         <BrowserRouter>
         <NavBar />
-          <Switch>
             <main>
+          <Switch>
             <Route exact path="/">
               <ItemListContainer/>
             </Route>
@@ -20,8 +20,8 @@ function App() {
             <Route exact path="/detalle/:idProduct">
               <ItemDetailContainer />
             </Route>
-            </main>
           </Switch>
+            </main>
         </BrowserRouter>
     </div>
   );

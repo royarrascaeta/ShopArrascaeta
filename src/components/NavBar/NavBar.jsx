@@ -4,17 +4,13 @@ import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.scss";
 
 const NavBar = () => {
-
   const navMenu = useRef(null);
   const btnIcon = useRef(null);
 
   const handleClick = (e) => {
-    console.log(e)
-    console.log("Click en boton")
     navMenu.current.classList.toggle("expand");
     btnIcon.current.classList.toggle("fa-times")
   }
-
 
   return(
     <header>
@@ -27,11 +23,11 @@ const NavBar = () => {
             <ul>
               <li><Link className="links" to="/">Home</Link></li>
               <li className="main">
-                <Link className="links">Categorias <i class="fas fa-chevron-down"></i></Link>
+                <span className="links">Categorias <i className="fas fa-chevron-down"></i></span>
                 <ul className="sub">
-                  <li><Link className="links" to="/categoria/Verde">Verde</Link></li>
-                  <li><Link className="links" to="/categoria/Azul">Azul</Link></li>
-                  <li><Link className="links" to="/categoria/Rojo">Rojo</Link></li>
+                  <li><Link className="links" to="/categoria/Guitarras Eléctricas">Guitarras Eléctricas</Link></li>
+                  <li><Link className="links" to="/categoria/Pianos">Pianos</Link></li>
+                  <li><Link className="links" to="/categoria/Ukeleles">Ukeleles</Link></li>
                 </ul>
               </li>
               <li><Link className="links" to="">Nosotros</Link></li>

@@ -13,14 +13,13 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     if(idCategory){
-      console.log("filter: " + idCategory)
       getData
       .then(res => setData(res.filter(el => el.category === idCategory)))
       .catch(err => console.log(err))
       .finally(()=> setLoading(false))
     }else{
       getData
-      .then(res => setData(res))
+      .then(res => setData(res.sort((a, b) => a.id - b.id)))
       .catch(err => console.log(err))
       .finally(()=> setLoading(false))
     }
@@ -33,7 +32,6 @@ const ItemListContainer = () => {
         ? <Loader />
         : <ItemList products={data} />
       }
-      {console.log(idCategory)}
     </div>
   )
 }
