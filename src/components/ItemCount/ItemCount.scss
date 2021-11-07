@@ -9,7 +9,8 @@
   gap: 0.8rem;
   text-align: center;
 
-  button {
+  button,
+  .checkout-btn {
     padding: 0;
     border: none;
     border-radius: 0.5rem;
@@ -30,16 +31,25 @@
     }
   }
 
-  button:last-child {
+  button:last-child,
+  .checkout-btn {
     padding: 1.6rem;
     grid-column: span 3;
     background-color: $alt-color;
     color: $light-color;
     font-size: 1.4rem;
+    text-decoration: none;
 
     &:hover {
+      color: $light-color;
       background-color: $alt-color-light;
       transition: all ease-in 0.1s;
     }
+  }
+
+  .available {
+    justify-content: center;
+    grid-column: span 3;
+    font-size: 1.4rem;
   }
 }

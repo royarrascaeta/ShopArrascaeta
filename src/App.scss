@@ -1,6 +1,11 @@
 @import "./components/shared";
 
+html {
+  box-sizing: border-box;
+}
+
 main {
+  box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 6.6rem;
@@ -8,6 +13,8 @@ main {
   font-size: 1.6rem;
 
   @include media-up(md) {
-    margin-top: 5rem;
+    padding-top: 5.5rem;
+    min-height: 100vh;
+    margin-bottom: 0;
   }
 }

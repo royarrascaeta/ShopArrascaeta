@@ -30,7 +30,7 @@ const ItemListContainer = () => {
       {
         loading 
         ? <Loader />
-        : <ItemList products={data} />
+        : <ItemList items={data} />
       }
     </div>
   )

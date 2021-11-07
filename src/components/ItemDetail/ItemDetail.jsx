@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import "./ItemDetail.scss";
+// import { useCartContext } from '../../context/CartContext';
 
 const ItemDetail = ({product}) => {
+  const [count, setCount] = useState(0);
+
+  // const {cartList, mostrarListado, addToCart} = useCartContext();
+
+  const onAdd = (qty) => {
+    setCount(qty)
+  }
+
   return (
     <>
       <div className="detail-img">
@@ -19,7 +28,7 @@ const ItemDetail = ({product}) => {
         </div>
         <div>
           <span className="price">${product.price}</span>
-          <ItemCount product={product} />
+          <ItemCount initial={count} stock={product.stock} product={product} onAdd={onAdd} />
         </div>
       </div>
     </>

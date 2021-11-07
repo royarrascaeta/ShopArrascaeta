@@ -3,11 +3,13 @@
 .item-detail-container {
   display: grid;
   width: 100%;
+  min-height: 200px;
   height: min-content;
   padding: 1rem 0rem;
   position: relative;
 
   @include media-up(md) {
+    min-height: 80vh;
     grid-template-columns: 3fr 2fr;
     gap: 1rem;
   }
