@@ -4,7 +4,7 @@ import "./CartWidget.scss"
 
 const CartWidget = () => {
   return (
-    <div className="cart"><Link to={"/"}><i className="fas fa-shopping-cart"></i></Link></div>
+    <div className="cart"><Link to={"/cart"}><i className="fas fa-shopping-cart"></i></Link></div>
   )
 }
 

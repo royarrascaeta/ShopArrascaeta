@@ -5,12 +5,13 @@ import "./ItemDetail.scss";
 // import { useCartContext } from '../../context/CartContext';
 
 const ItemDetail = ({product}) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   // const {cartList, mostrarListado, addToCart} = useCartContext();
 
   const onAdd = (qty) => {
-    setCount(qty)
+    setCount(qty);
+    console.log(`Añadido al carrito ${product.name} - Cantidad: ${qty}`)
   }
 
   return (

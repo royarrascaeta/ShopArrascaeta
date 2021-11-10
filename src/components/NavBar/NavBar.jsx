@@ -17,7 +17,7 @@ const NavBar = () => {
       <div className="container">
         <div className="nav">
           <div className="nav_logo">
-            <Link to="/"><span>$</span><span>erendipia</span><span>SHOP</span></Link>
+            <Link to="/"><span>$</span><span>erendipia</span><span>MUSIC</span></Link>
           </div>
           <nav className="nav_menu" ref={navMenu} >
             <ul>
