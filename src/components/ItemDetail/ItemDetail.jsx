@@ -2,18 +2,19 @@ import React, {useState} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import "./ItemDetail.scss";
-// import { useCartContext } from '../../context/CartContext';
+import { useCartContext } from '../../context/CartContext';
 
 const ItemDetail = ({product}) => {
   const [count, setCount] = useState(1);
 
-  // const {cartList, mostrarListado, addToCart} = useCartContext();
+  const {cartList, showCartList, addItem} = useCartContext();
 
   const onAdd = (qty) => {
     setCount(qty);
-    console.log(`Añadido al carrito ${product.name} - Cantidad: ${qty}`)
+    addItem({...product, quantity: qty});
+    console.log(`Añadido al carrito \nProducto: ${product.name} \nCantidad: ${qty}`);
   }
-
+  
   return (
     <>
       <div className="detail-img">
