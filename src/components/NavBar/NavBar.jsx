@@ -1,9 +1,12 @@
 import React, {useRef} from "react";
 import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
+import { useCartContext } from '../../context/CartContext';
 import "./NavBar.scss";
 
 const NavBar = () => {
+  const {quantity} = useCartContext();
+
   const navMenu = useRef(null);
   const btnIcon = useRef(null);
 
@@ -32,7 +35,7 @@ const NavBar = () => {
               </li>
               <li><Link className="links" to="">Nosotros</Link></li>
               <li><Link className="links" to="">Contacto</Link></li>
-              <CartWidget />
+              {quantity !== 0 && <CartWidget />}
             </ul>
           </nav>
         </div>

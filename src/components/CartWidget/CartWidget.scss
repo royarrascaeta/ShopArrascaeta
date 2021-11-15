@@ -3,6 +3,7 @@
 .cart {
   display: flex;
   order: 0;
+  position: relative;
 
   @include media-up(md) {
     order: 1;
@@ -29,5 +30,17 @@
     font-size: 2rem;
     transition: transform linear 0.2s;
     margin-top: 0.4rem;
+    margin-right: 1rem;
+  }
+
+  span {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 0.5rem;
+    background: $alt-color;
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    line-height: 0.8rem;
   }
 }

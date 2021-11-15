@@ -3,7 +3,7 @@ import Item from '../Item/Item';
 import "./ItemList.scss";
 
 
-const ItemList = ({items}) => {
+const ItemList = ({items, title}) => {
   return (
     <div className="item-list">
       {

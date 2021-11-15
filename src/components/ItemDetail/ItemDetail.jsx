@@ -12,7 +12,7 @@ const ItemDetail = ({product}) => {
   const onAdd = (qty) => {
     setCount(qty);
     addItem({...product, quantity: qty});
-    console.log(`Añadido al carrito \nProducto: ${product.name} \nCantidad: ${qty}`);
+    // console.log(`Añadido al carrito \nProducto: ${product.name} \nCantidad: ${qty}`);
   }
   
   return (

@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import ItemList from '../ItemList/ItemList';
 import {getData} from "../../helpers/getData";
 import Loader from "../Loader/Loader";
+import { getFirestore } from '../../helpers/getFirestore';
 import "./ItemListContainer.scss";
 
 const ItemListContainer = () => {
@@ -13,15 +14,19 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     if(idCategory){
-      getData
-      .then(res => setData(res.filter(el => el.category === idCategory)))
+      const db = getFirestore();
+      const dbQuery = db.collection("items").where("category","==",idCategory).get();
+      dbQuery
+      .then(res => setData(res.docs.map( item => ({id:item.id, ...item.data()}) )))
       .catch(err => console.log(err))
-      .finally(()=> setLoading(false))
+      .finally(()=> setLoading(false));
     }else{
-      getData
-      .then(res => setData(res.sort((a, b) => a.id - b.id)))
+      const db = getFirestore();
+      const dbQuery = db.collection("items").get();
+      dbQuery
+      .then(res => setData(res.docs.map( item => ({id:item.id, ...item.data()}) )))
       .catch(err => console.log(err))
-      .finally(()=> setLoading(false))
+      .finally(()=> setLoading(false));
     }
   }, [idCategory])
 
@@ -30,7 +35,15 @@ const ItemListContainer = () => {
       {
         loading 
         ? <Loader />
-        : <ItemList items={data} />
+        : idCategory 
+          ? <>
+              <h2><span>Categoría: </span>{idCategory}</h2>
+              <ItemList  items={data} />
+            </>
+          : <>
+              <h2><span>Categoría: </span>Todos</h2>
+              <ItemList items={data} />
+            </>
       }
     </div>
   )

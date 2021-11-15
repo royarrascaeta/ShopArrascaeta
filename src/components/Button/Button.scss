@@ -1,0 +1,21 @@
+@import "../shared";
+
+.button {
+  width: 100%;
+  padding: 1.6rem;
+  background-color: $alt-color;
+  color: $light-color;
+  font-size: 1.4rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    color: $light-color;
+    background-color: $alt-color-light;
+    transition: all ease-in 0.1s;
+  }
+}

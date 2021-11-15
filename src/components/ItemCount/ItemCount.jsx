@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
 import "./ItemCount.scss"
 
 const ItemCount = ({initial, stock, onAdd}) => {
@@ -17,15 +18,15 @@ const ItemCount = ({initial, stock, onAdd}) => {
     button
     ?
       <div className="item-count">
-        <Link className="checkout-btn" to="/cart">Finalizar Compra</Link>
+        <Link style={{gridColumn: "span 3"}} to="/cart"><Button text="Finalizar Compra"/></Link>
       </div>
     : 
       <div className="item-count">
-        <button disabled={count === initial} onClick={()=>setCount(count - 1)}>-</button>
+        <button className="quantity-btn" disabled={count === initial} onClick={()=>setCount(count - 1)}>-</button>
         <span>{count}</span>
-        <button disabled={count === stock} onClick={()=>setCount(count + 1)}>+</button>
+        <button className="quantity-btn" disabled={count === stock} onClick={()=>setCount(count + 1)}>+</button>
         <span className="available">Disponibles: {stock}</span>
-        <button onClick={handlerOnAdd}>Agregar al carrito</button>      
+        <Button onclick={handlerOnAdd} text="Agregar al carrito"/>      
       </div>
   )
 }

@@ -3,4 +3,14 @@
 .item-list-container {
   text-align: center;
   font-size: 2rem;
+  align-self: self-start;
+
+  h2 {
+    font-size: 1.6rem;
+    text-align: left;
+
+    span {
+      font-weight: 400;
+    }
+  }
 }
