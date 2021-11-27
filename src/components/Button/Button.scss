@@ -13,9 +13,21 @@
   transition: 0.3s;
   cursor: pointer;
 
+  @include media-up(md) {
+    width: 20rem;
+  }
+
   &:hover {
     color: $light-color;
     background-color: $alt-color-light;
     transition: all ease-in 0.1s;
   }
+
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+.full-width {
+  width: 100%;
 }

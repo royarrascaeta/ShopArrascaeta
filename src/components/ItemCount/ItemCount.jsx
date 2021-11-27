@@ -18,7 +18,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
     button
     ?
       <div className="item-count">
-        <Link style={{gridColumn: "span 3"}} to="/cart"><Button text="Finalizar Compra"/></Link>
+        <Link style={{gridColumn: "span 3"}} to="/cart"><Button text="Finalizar Compra" addClass="full-width"/></Link>
       </div>
     : 
       <div className="item-count">
@@ -26,7 +26,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
         <span>{count}</span>
         <button className="quantity-btn" disabled={count === stock} onClick={()=>setCount(count + 1)}>+</button>
         <span className="available">Disponibles: {stock}</span>
-        <Button onclick={handlerOnAdd} text="Agregar al carrito"/>      
+        <Button onclick={handlerOnAdd} text="Agregar al carrito" addClass="full-width"/>      
       </div>
   )
 }

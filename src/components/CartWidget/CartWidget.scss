@@ -35,12 +35,17 @@
 
   span {
     position: absolute;
-    bottom: 1.5rem;
-    right: 0.5rem;
+    bottom: 1rem;
+    left: 3rem;
     background: $alt-color;
     padding: 0.5rem;
     border-radius: 50%;
     font-size: 1.4rem;
     line-height: 0.8rem;
+
+    @include media-up(md) {
+      right: 0.5rem;
+      bottom: 1.5rem;
+    }
   }
 }

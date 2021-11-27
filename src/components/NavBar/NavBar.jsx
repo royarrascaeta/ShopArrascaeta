@@ -5,8 +5,6 @@ import { useCartContext } from '../../context/CartContext';
 import "./NavBar.scss";
 
 const NavBar = () => {
-  const {quantity} = useCartContext();
-
   const navMenu = useRef(null);
   const btnIcon = useRef(null);
 
@@ -28,6 +26,7 @@ const NavBar = () => {
               <li className="main">
                 <span className="links">Categorias <i className="fas fa-chevron-down"></i></span>
                 <ul className="sub">
+                  <li><Link className="links" to="/">Todos</Link></li>
                   <li><Link className="links" to="/categoria/Guitarras Eléctricas">Guitarras Eléctricas</Link></li>
                   <li><Link className="links" to="/categoria/Pianos">Pianos</Link></li>
                   <li><Link className="links" to="/categoria/Ukeleles">Ukeleles</Link></li>
@@ -35,7 +34,7 @@ const NavBar = () => {
               </li>
               <li><Link className="links" to="">Nosotros</Link></li>
               <li><Link className="links" to="">Contacto</Link></li>
-              {quantity !== 0 && <CartWidget />}
+              <CartWidget />
             </ul>
           </nav>
         </div>

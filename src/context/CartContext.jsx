@@ -11,7 +11,7 @@ const CartContextProvider = ({children}) => {
   const [total, setTotal] = useState(0);
 
   const [quantity, setQuantity] = useState(0);
-
+  
   useEffect(() => {
     totalValue();
     calcQuantity();
@@ -51,6 +51,11 @@ const CartContextProvider = ({children}) => {
     setCartList(newCartList);
   }
 
+  const removeAll = () => {
+    setCartList([]);
+    console.log("Items Borrados");
+  }
+
   const totalValue = () => {
     let total = 0;
 
@@ -86,7 +91,8 @@ const CartContextProvider = ({children}) => {
       quantity,
       showCartList,
       addItem,
-      removeItem
+      removeItem,
+      removeAll
     }}>
       {children}
     </CartContext.Provider>
