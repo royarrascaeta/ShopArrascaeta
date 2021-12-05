@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+.container {
+  width: 100%;
+  position: fixed;
+  background-color: #262626;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 2;
+  bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    top: 0;
+    bottom: unset;
+  }
+}
+
+.nav {
+  margin: 0 auto;
+  padding: 0.8rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  cursor: default;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    max-width: 1200px;
+    padding: 0 1.6rem;
+    -ms-grid-columns: auto 5fr;
+        grid-template-columns: auto 5fr;
+    justify-items: unset;
+  }
+}
+
+.nav_logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 1;
+  padding: 0.4rem 0;
+}
+
+.nav_logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-top: -0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fbfbf2;
+}
+
+.nav_logo span:nth-child(1) {
+  color: #fb8500;
+  font-size: 3.8rem;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.nav_logo span:nth-child(3) {
+  position: absolute;
+  right: 0;
+  bottom: 6%;
+  background: #fb8500;
+  font-size: 1.6rem;
+  line-height: 1.4rem;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+.nav_menu {
+  width: 100%;
+  z-index: 1;
+  height: 0;
+  max-height: 50vh;
+  overflow-y: auto;
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+}
+
+@media screen and (min-width: 768px) {
+  .nav_menu {
+    width: 80%;
+    height: 100%;
+    max-height: unset;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    overflow: unset;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nav_menu {
+    width: 60%;
+  }
+}
+
+.nav_menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  z-index: 1;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .nav_menu ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.nav_menu ul li {
+  width: 100%;
+  height: auto;
+  position: relative;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.nav_menu ul li .links {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fbfbf2;
+  background-color: #262626;
+  padding: 1.2rem 0.8rem;
+  -webkit-transition: background-color ease-in 0.2s;
+  transition: background-color ease-in 0.2s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav_menu ul li .links {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 1rem;
+  }
+}
+
+.nav_menu ul li .links:hover {
+  background-color: #313131;
+  -webkit-transition: background-color ease-in 0.2s;
+  transition: background-color ease-in 0.2s;
+}
+
+.nav_menu li.main {
+  z-index: 0;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .nav_menu li.main {
+    overflow: unset;
+  }
+}
+
+.nav_menu li.main:hover > ul.sub {
+  position: relative;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  opacity: 1;
+  -webkit-transition: opacity ease-in 0.5s, -webkit-transform ease-in 0.3s;
+  transition: opacity ease-in 0.5s, -webkit-transform ease-in 0.3s;
+  transition: transform ease-in 0.3s, opacity ease-in 0.5s;
+  transition: transform ease-in 0.3s, opacity ease-in 0.5s, -webkit-transform ease-in 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  .nav_menu li.main:hover > ul.sub {
+    position: absolute;
+  }
+}
+
+.nav_menu li.main i {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.nav_menu ul.sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  opacity: 0;
+  -webkit-transition: opacity ease-in 0.5s, -webkit-transform ease-in 0.3s;
+  transition: opacity ease-in 0.5s, -webkit-transform ease-in 0.3s;
+  transition: transform ease-in 0.3s, opacity ease-in 0.5s;
+  transition: transform ease-in 0.3s, opacity ease-in 0.5s, -webkit-transform ease-in 0.3s;
+  z-index: -1;
+  position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+  .nav_menu ul.sub {
+    display: block;
+    -webkit-transform: translateY(-1000%);
+            transform: translateY(-1000%);
+  }
+}
+
+.nav_menu ul.sub li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav_menu ul.sub li .links {
+  background: #fb8500;
+  text-align: left;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1.2rem 0.8rem;
+}
+
+.nav_menu ul.sub li .links:hover {
+  background: #f07502;
+}
+
+.nav_btn {
+  position: absolute;
+  top: 1.6rem;
+  right: 2.5%;
+  border: none;
+  background: transparent;
+  font-size: 3rem;
+  color: #fb8500;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .nav_btn {
+    display: none;
+  }
+}
+
+.expand {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+/*# sourceMappingURL=NavBar.css.map */

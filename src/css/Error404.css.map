@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../pages/Error404.scss"
+    ],
+    "names": [],
+    "file": "Error404.css"
+}

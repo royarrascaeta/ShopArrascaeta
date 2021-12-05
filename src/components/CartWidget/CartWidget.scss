@@ -42,6 +42,8 @@
     border-radius: 50%;
     font-size: 1.4rem;
     line-height: 0.8rem;
+    display: flex;
+    justify-content: center;
 
     @include media-up(md) {
       right: 0.5rem;

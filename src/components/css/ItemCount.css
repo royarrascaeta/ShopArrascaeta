@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+.item-count {
+  width: 100%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.8rem;
+  text-align: center;
+}
+
+.item-count .quantity-btn {
+  padding: 0;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  color: #33b9e2;
+  font-weight: bold;
+  font-size: 3rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.item-count .quantity-btn:hover {
+  color: #4cc9f0;
+}
+
+.item-count .quantity-btn:disabled {
+  cursor: auto;
+  color: #e5e6e4;
+}
+
+.item-count .available {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-column: span 3;
+  font-size: 1.4rem;
+}
+
+.item-count .button {
+  grid-column: span 3;
+}
+/*# sourceMappingURL=ItemCount.css.map */

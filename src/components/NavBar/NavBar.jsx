@@ -26,7 +26,7 @@ const NavBar = () => {
               <li className="main">
                 <span className="links">Categorias <i className="fas fa-chevron-down"></i></span>
                 <ul className="sub">
-                  <li><Link className="links" to="/">Todos</Link></li>
+                  <li><Link className="links" to="/categoria/Todos">Todos</Link></li>
                   <li><Link className="links" to="/categoria/Guitarras Eléctricas">Guitarras Eléctricas</Link></li>
                   <li><Link className="links" to="/categoria/Pianos">Pianos</Link></li>
                   <li><Link className="links" to="/categoria/Ukeleles">Ukeleles</Link></li>

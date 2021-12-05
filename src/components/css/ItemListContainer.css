@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+.item-list-container {
+  text-align: center;
+  font-size: 2rem;
+  -ms-flex-item-align: self-start;
+      -ms-grid-row-align: self-start;
+      align-self: self-start;
+}
+
+.item-list-container h2 {
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+.item-list-container h2 span {
+  font-weight: 400;
+}
+/*# sourceMappingURL=ItemListContainer.css.map */

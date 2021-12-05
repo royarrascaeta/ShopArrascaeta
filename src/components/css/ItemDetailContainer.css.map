@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACCA,OAAO,CAAC,sIAAI;AACZ,OAAO,CAAC,gHAAI;ADAZ,AAAA,sBAAsB,CAAC;EACrB,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,KAAK;EACjB,MAAM,EAAE,WAAW;EACnB,OAAO,EAAE,SAAS;EAClB,QAAQ,EAAE,QAAQ;CAOnB;;ACYC,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EDzBrC,AAAA,sBAAsB,CAAC;IASnB,UAAU,EAAE,IAAI;IAChB,qBAAqB,EAAE,OAAO;IAC9B,GAAG,EAAE,IAAI;GAEZ",
+    "sources": [
+        "../ItemDetailContainer/ItemDetailContainer.scss",
+        "../_shared.scss"
+    ],
+    "names": [],
+    "file": "ItemDetailContainer.css"
+}

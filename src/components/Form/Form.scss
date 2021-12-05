@@ -15,10 +15,22 @@
     input {
       font-size: 1.6rem;
       padding: 0.5rem;
+      @include border-light;
+      border-width: 0.2rem;
+      @include border-radius;
 
       &:last-of-type {
-        margin-bottom: 1.6rem;
+        margin-bottom: 0;
       }
+    }
+
+    .error-message {
+      margin: 0;
+      color: rgb(221, 44, 44);
+      font-weight: bold;
+      font-size: 1.2npmrem;
+      text-align: center;
+      @include border-radius;
     }
   }
 }

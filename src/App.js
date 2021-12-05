@@ -3,8 +3,11 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from "./components/NavBar/NavBar";
 import CartContextProvider, { CartContext } from "./context/CartContext";
-import './App.scss';
 import Cart from "./components/Cart/Cart";
+import Error404 from "./pages/Error404";
+import SectionContainer from "./components/SectionContainer/SectionContainer";
+import Home from "./components/Home/Home";
+import './App.scss';
 
 function App() {
   return (
@@ -15,16 +18,21 @@ function App() {
             <main>
             <Switch>
               <Route exact path="/">
-                <ItemListContainer/>
+                <SectionContainer>
+                  <Home />
+                </SectionContainer>
               </Route>
               <Route exact path="/categoria/:idCategory">
-                <ItemListContainer />
+                <ItemListContainer showCategory={true} />
               </Route>
               <Route exact path="/detalle/:idProduct">
                 <ItemDetailContainer />
               </Route>
               <Route exact path="/cart">
                 <Cart />
+              </Route>
+              <Route path="*">
+                <Error404 />
               </Route>
             </Switch>
             </main>

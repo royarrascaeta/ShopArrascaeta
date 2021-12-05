@@ -33,3 +33,13 @@ $breakpoints: (
 @mixin border-light {
   border: 0.1rem solid $shadow-color;
 }
+
+@mixin border-radius {
+  border-radius: 0.5rem;
+}
+
+@mixin box {
+  box-shadow: 0rem 0rem 0.5rem $shadow-color;
+  @include border-radius;
+  @include border-light;
+}

@@ -78,18 +78,11 @@ const CartContextProvider = ({children}) => {
 
   const isInCart = (id) => cartList.find(item => item.id === id) || false;
 
-  const showCartList = () => {
-    console.log(cartList)
-  }
-
-  // showCartList();
-
   return (
     <CartContext.Provider value={{
       cartList,
       total,
       quantity,
-      showCartList,
       addItem,
       removeItem,
       removeAll
@@ -99,4 +92,4 @@ const CartContextProvider = ({children}) => {
   )
 }
 
-export default CartContextProvider
+export default CartContextProvider;

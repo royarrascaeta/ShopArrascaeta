@@ -12,7 +12,6 @@ const Item = ({detail}) => {
           </figure>
           <h4 className="title">{detail.name}</h4>
         </Link>
-          <p className="description">{detail.description}</p>
           <span className="price">${detail.price}</span>
       </div>
   )

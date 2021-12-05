@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACCA,OAAO,CAAC,sIAAI;AACZ,OAAO,CAAC,gHAAI;ADAZ,AAAA,IAAI,CAAC;EACH,SAAS,EAAE,KAAK;CACjB;;AAED,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,CAAC;EACT,WAAW,ECOD,OAAO,EAAE,UAAU;EDN7B,sBAAsB,EAAE,WAAW;EACnC,uBAAuB,EAAE,SAAS;CACnC",
+    "sources": [
+        "../src/index.scss",
+        "../src/components/_shared.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}

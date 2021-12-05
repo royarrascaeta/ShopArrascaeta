@@ -28,6 +28,17 @@
   }
 }
 
+.alt {
+  background-color: $light-color;
+  color: $alt-color;
+  border: 0.2rem solid $alt-color;
+
+  &:hover {
+    background-color: unset;
+    color: $alt-color-light;
+  }
+}
+
 .full-width {
   width: 100%;
 }
