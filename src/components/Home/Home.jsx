@@ -47,7 +47,7 @@ const Home = () => {
           categories.map(category => (
             <div key={category.id} className="categories-item">
                 <Link className="link" to={`/categoria/${category.name}`}>
-                  <img src={`./assets/img/categories/${category.img}`} alt="" />
+                  <img src={`../assets/img/categories/${category.img}`} alt="" />
                   <span>{category.name}</span>
                 </Link>
               </div>
