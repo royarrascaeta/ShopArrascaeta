@@ -17,6 +17,7 @@ main {
   min-height: 90vh;
 
   @include media-up(md) {
+    padding: 4.5rem 1.6rem;
     padding-top: 5.5rem;
     min-height: 100vh;
     margin-bottom: 0;

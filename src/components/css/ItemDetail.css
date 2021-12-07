@@ -81,4 +81,11 @@
   font-weight: bold;
   text-align: center;
 }
+
+.detail-list .no-stock {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
 /*# sourceMappingURL=ItemDetail.css.map */

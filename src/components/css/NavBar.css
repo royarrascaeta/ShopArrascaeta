@@ -36,8 +36,8 @@
   .nav {
     max-width: 1200px;
     padding: 0 1.6rem;
-    -ms-grid-columns: auto 5fr;
-        grid-template-columns: auto 5fr;
+    -ms-grid-columns: 5fr 2fr;
+        grid-template-columns: 5fr 2fr;
     justify-items: unset;
   }
 }
@@ -97,7 +97,6 @@
 
 @media screen and (min-width: 768px) {
   .nav_menu {
-    width: 80%;
     height: 100%;
     max-height: unset;
     -webkit-box-pack: end;
@@ -106,12 +105,6 @@
     -ms-grid-column-align: end;
         justify-self: end;
     overflow: unset;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .nav_menu {
-    width: 60%;
   }
 }
 

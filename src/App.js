@@ -2,12 +2,13 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from "./components/NavBar/NavBar";
-import CartContextProvider, { CartContext } from "./context/CartContext";
+import CartContextProvider from "./context/CartContext";
 import Cart from "./components/Cart/Cart";
 import Error404 from "./pages/Error404";
 import SectionContainer from "./components/SectionContainer/SectionContainer";
 import Home from "./components/Home/Home";
 import './App.scss';
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             </main>
         </BrowserRouter>
       </CartContextProvider>
+      <Footer />
     </div>
   );
 }

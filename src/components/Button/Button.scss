@@ -42,3 +42,15 @@
 .full-width {
   width: 100%;
 }
+
+.disabled {
+  cursor: auto;
+  margin-bottom: 1rem;
+  color: $dark-color;
+  background-color: $shadow-color;
+
+  &:hover {
+    background-color: $shadow-color;
+    color: $dark-color;
+  }
+}

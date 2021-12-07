@@ -33,11 +33,9 @@
 
 .form-container form .error-message {
   margin: 0;
-  padding: 1rem;
-  border: 0.2rem solid #dd2c2c;
   color: #dd2c2c;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.2npmrem;
   text-align: center;
   border-radius: 0.5rem;
 }

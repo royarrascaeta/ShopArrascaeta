@@ -1,0 +1,49 @@
+@import "../shared";
+
+footer {
+  max-width: 100%;
+  background-color: $dark-color;
+  margin-bottom: 6.5rem;
+
+  @include media-up(md) {
+    margin-bottom: 0;
+  }
+
+  .footer_content {
+    box-sizing: border-box;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 3.2rem 1.6rem;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: $light-color;
+
+    @include media-up(md) {
+      flex-direction: row;
+      padding: 3.2rem 1.6rem;
+      font-size: 1.4rem;
+    }
+
+    div {
+      flex-grow: 1;
+      text-align: center;
+
+      @include media-up(md) {
+        text-align: left;
+      }
+    }
+
+    div:nth-child(2) {
+      @include media-up(md) {
+        text-align: right;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $alt-color;
+    }
+  }
+}

@@ -12,22 +12,18 @@ const ItemListContainer = ({limit, showCategory}) => {
   const { idCategory } = useParams();
 
   useEffect(() => {
-    if(idCategory && idCategory !== "Todos"){
-      const db = getFirestore();
-      const dbQuery = db.collection("items").where("category","==",idCategory).get();
-      dbQuery
-      .then(res => setData(res.docs.map( item => ({id:item.id, ...item.data()}) )))
-      .catch(err => console.log(err))
-      .finally(()=> setLoading(false));
-    }else if(!idCategory || idCategory === "Todos"){
-      const db = getFirestore();
-      const dbQuery = db.collection("items");
-      const filteredQuery = limit ? dbQuery.orderBy("name").limit(limit).get() : dbQuery.get();
-      filteredQuery
-      .then(res => setData(res.docs.map( item => ({id:item.id, ...item.data()}) )))
-      .catch(err => console.log(err))
-      .finally(()=> setLoading(false));
-    }
+
+    const db = getFirestore();
+    const dbQuery = (idCategory && idCategory !== "Todos") 
+      ? db.collection("items").where("category","==",idCategory).get()
+      : limit 
+        ? db.collection("items").orderBy("name").limit(limit).get()
+        : db.collection("items").get()
+    dbQuery
+    .then(res => setData(res.docs.map( item => ({id:item.id, ...item.data()}) )))
+    .catch(err => console.log(err))
+    .finally(()=> setLoading(false));
+
   }, [idCategory])
 
   return (

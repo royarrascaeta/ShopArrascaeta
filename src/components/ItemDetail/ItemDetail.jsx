@@ -1,16 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ItemCount from '../ItemCount/ItemCount';
+import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext';
 import "./ItemDetail.scss";
 
 const ItemDetail = ({product}) => {
-  const [count, setCount] = useState(1);
+  const {addItem, cartList} = useCartContext();
 
-  const {addItem} = useCartContext();
+  const available = cartList.length !== 0
+    ? product.stock - cartList.find(item => item.id === product.id).quantity
+    : product.stock
 
   const onAdd = (qty) => {
-    setCount(qty);
     addItem({...product, quantity: qty});
   }
   
@@ -29,7 +31,15 @@ const ItemDetail = ({product}) => {
         </div>
         <div>
           <span className="price">${product.price}</span>
-          <ItemCount initial={count} stock={product.stock} product={product} onAdd={onAdd} />
+          {
+            available !== 0
+              ? <ItemCount initial={available !== 0 ? 1 : available} stock={available} product={product} onAdd={onAdd} />
+              : <>
+                <Button addClass="full-width disabled" text="Producto sin stock" />
+                <Link to="/cart" style={{gridColumn: "span 3"}}><Button text="Ver Carrito" addClass="full-width alt"/></Link>
+                </>
+          }
+          
         </div>
       </div>
     </>

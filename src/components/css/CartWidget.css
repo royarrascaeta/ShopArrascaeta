@@ -8,6 +8,7 @@
       -ms-flex-order: 0;
           order: 0;
   position: relative;
+  background: #262626;
 }
 
 @media screen and (min-width: 768px) {

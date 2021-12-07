@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACCA,OAAO,CAAC,sIAAI;AACZ,OAAO,CAAC,gHAAI;ADAZ,AAAA,kBAAkB,CAAC;EACjB,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,UAAU;CACvB",
+    "sources": [
+        "../SectionContainer/SectionContainer.scss",
+        "../_shared.scss"
+    ],
+    "names": [],
+    "file": "SectionContainer.css"
+}

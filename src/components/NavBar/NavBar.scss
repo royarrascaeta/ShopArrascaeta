@@ -27,7 +27,7 @@
   @include media-up(md) {
     max-width: 1200px;
     padding: 0 1.6rem;
-    grid-template-columns: auto 5fr;
+    grid-template-columns: 5fr 2fr;
     justify-items: unset;
   }
 
@@ -76,16 +76,11 @@
     transition: all ease-in-out 1s;
 
     @include media-up(md) {
-      width: 80%;
       height: 100%;
       max-height: unset;
       justify-content: end;
       justify-self: end;
       overflow: unset;
-    }
-
-    @include media-up(lg) {
-      width: 60%;
     }
 
     ul {

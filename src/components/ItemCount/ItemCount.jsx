@@ -14,8 +14,9 @@ const ItemCount = ({initial, stock, onAdd}) => {
   const handlerOnAdd = () => {
     onAdd(count);
     setButton(true);
+    setCount(initial);
   }
-
+  
   const backButton = () => {
     setButton(false);
   }

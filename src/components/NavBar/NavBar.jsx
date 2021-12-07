@@ -1,7 +1,6 @@
 import React, {useRef} from "react";
 import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
-import { useCartContext } from '../../context/CartContext';
 import "./NavBar.scss";
 
 const NavBar = () => {
@@ -32,8 +31,6 @@ const NavBar = () => {
                   <li><Link className="links" to="/categoria/Ukeleles">Ukeleles</Link></li>
                 </ul>
               </li>
-              <li><Link className="links" to="">Nosotros</Link></li>
-              <li><Link className="links" to="">Contacto</Link></li>
               <CartWidget />
             </ul>
           </nav>
