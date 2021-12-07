@@ -8,7 +8,7 @@ import "./ItemDetail.scss";
 const ItemDetail = ({product}) => {
   const {addItem, cartList} = useCartContext();
 
-  const available = cartList.length !== 0
+  const available = cartList.find(item => item.id === product.id)
     ? product.stock - cartList.find(item => item.id === product.id).quantity
     : product.stock
 
