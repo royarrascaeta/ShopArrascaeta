@@ -29,6 +29,9 @@ const NavBar = () => {
                   <li><Link className="links" to="/categoria/Guitarras Eléctricas">Guitarras Eléctricas</Link></li>
                   <li><Link className="links" to="/categoria/Pianos">Pianos</Link></li>
                   <li><Link className="links" to="/categoria/Ukeleles">Ukeleles</Link></li>
+                  <li><Link className="links" to="/categoria/Bajos">Bajos</Link></li>
+                  <li><Link className="links" to="/categoria/Saxos">Saxos</Link></li>
+                  <li><Link className="links" to="/categoria/Baterias">Baterias</Link></li>
                 </ul>
               </li>
               <CartWidget />
