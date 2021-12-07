@@ -8,7 +8,7 @@ const Item = ({detail}) => {
     <div className="item">
         <Link className="link" to={`/detalle/${detail.id}`}>
           <figure className="img">
-            <img src={`http://localhost:3000/assets/img/products/${detail.pictureUrl}`} alt={detail.name} />
+            <img src={`../assets/img/products/${detail.pictureUrl}`} alt={detail.name} />
           </figure>
           <h4 className="title">{detail.name}</h4>
         </Link>
